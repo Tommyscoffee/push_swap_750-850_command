@@ -19,6 +19,7 @@ this is 42tokyo's subject which sort arguments only with 6 commands.
 [rrb] rbの逆バージョン
 
 [visualizer]
+file:///Users/akihito/SS/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202022-06-01%2021.19.54.png
 もし、実際にコマンドごとにスタックがどのように変化して行っているのかを確認したい場合は、ビジュアライザーを用意したのでそれをご利用ください。
 ご利用方法は、src/operation/command_a.c, command_b.cファイルのvisualizerというコメントがある箇所のコメントアウトを外すだけです。（アナログな方法ですみません）
 
