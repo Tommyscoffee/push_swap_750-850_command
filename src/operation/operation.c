@@ -113,9 +113,10 @@ int	operation_stack(int argc, t_bi_list *nil_a, t_bi_list *nil_b)
 	{
 		if (argc == 2)
 			return (0);
-		else if (argc == 3)
+		else if (argc == 3){
 			if (nil_a->next->value > nil_a->prev->value)
 				sa(nil_a);
+		}
 		else if (argc >= 4 && argc <= 7)
 			arg_3_to_6(argc, nil_a, nil_b);
 	}
