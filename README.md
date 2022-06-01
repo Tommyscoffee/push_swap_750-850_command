@@ -30,4 +30,5 @@ this is 42tokyo's subject which sort arguments only with 6 commands.
 [手数]
 手数ですが、引数が100この時(つまり"./exec.sh 100"の時)大体750手数くらいですが、誤差が120くらいあるので、何回かしてみてください。
 
-<img width="632" alt="スクリーンショット 2022-06-01 21 23 31" src="https://user-images.githubusercontent.com/67151024/171403567-d31aa3ac-e01e-4215-b3a2-773d3aa857e9.png">
+<img width="1195" alt="スクリーンショット 2022-06-01 21 31 42" src="https://user-images.githubusercontent.com/67151024/171405108-2643280e-590b-4b21-8c65-917d8feac4fd.png">
+
