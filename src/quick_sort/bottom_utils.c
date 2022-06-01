@@ -1,0 +1,63 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   bottom_utils.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: atomizaw <atomizaw@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/01/23 21:58:06 by atomizaw          #+#    #+#             */
+/*   Updated: 2022/02/05 20:51:51 by atomizaw         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "../../includes/pushswap.h"
+
+int	bottom_order(t_bi_list *nil_a, t_bi_list *nil_b)
+{
+	t_bi_list	*p;
+
+	p = nil_b->prev;
+	if (nil_b->size_now == 1)
+		pa(nil_a, nil_b);
+	else if (nil_b->size_now == 2)
+	{
+		if (nil_b->next->rank < nil_b->prev->rank)
+			sb(nil_b);
+		pa(nil_a, nil_b);
+		pa(nil_a, nil_b);
+	}
+	else if (p->prev->prev->rank < p->prev->rank)
+		return (bottom_order_first(nil_a, nil_b));
+	else
+		return (bottom_order_second(nil_a, nil_b));
+	return (0);
+}
+
+int	bottom_order_first(t_bi_list *nil_a, t_bi_list *nil_b)
+{
+	t_bi_list	*p;
+
+	p = nil_b->prev;
+	if (p->prev->rank < p->rank)
+		sort_bottom_123(nil_a, nil_b);
+	else if (p->prev->prev->rank < p->rank)
+		sort_bottom_132(nil_a, nil_b);
+	else if (p->prev->rank > p->rank)
+		sort_bottom_231(nil_a, nil_b);
+	return (0);
+}
+
+int	bottom_order_second(t_bi_list *nil_a, t_bi_list *nil_b)
+{
+	t_bi_list	*p;
+
+	p = nil_b->prev;
+	if (p->prev->prev->rank < p->rank)
+		sort_bottom_213(nil_a, nil_b);
+	else if (p->prev->prev->rank > p->rank
+		&& p->prev->rank < p->rank)
+		sort_bottom_312(nil_a, nil_b);
+	else if (p->prev->rank > p->rank)
+		sort_bottom_321(nil_a, nil_b);
+	return (0);
+}
